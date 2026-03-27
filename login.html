@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alke Wallet - Tu billetera digital segura del Banco Basquality">
+    <title>Alke Wallet - Inicio de Sesión</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- jQuery UI CSS para efectos -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="login-page">
+    <!-- Contenedor principal de la página de inicio de sesión -->
+    <main class="login-container">
+        <!-- Encabezado con logo y título del banco -->
+        <header class="logo-container">
+            <div class="logo">
+                <i class="fas fa-wallet"></i>
+            </div>
+            <h1>Banco Basquality</h1>
+            <p class="subtitle">Tu billetera digital segura</p>
+        </header>
+
+        <!-- Contenedor para mensajes de alerta dinámicos -->
+        <div id="alert-container" role="alert" aria-live="polite"></div>
+
+        <!-- Sección del formulario de inicio de sesión -->
+        <section>
+            <form id="loginForm" class="needs-validation" novalidate aria-labelledby="loginTitle">
+                <h2 id="loginTitle" class="visually-hidden">Formulario de Inicio de Sesión</h2>
+                
+                <!-- Campo de entrada para correo electrónico -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input 
+                        type="email" 
+                        class="form-control" 
+                        id="email" 
+                        name="email"
+                        placeholder="usuario@ejemplo.com" 
+                        autocomplete="email"
+                        required
+                        aria-required="true"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    <div class="invalid-feedback">
+                        Por favor ingresa un correo electrónico válido.
+                    </div>
+                    <div class="valid-feedback">
+                        ¡Correo válido!
+                    </div>
+                </div>
+
+                <!-- Campo de entrada para contraseña con botón para mostrar/ocultar -->
+                <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <div style="position: relative;">
+                        <input 
+                            type="password" 
+                            class="form-control" 
+                            id="password" 
+                            name="password"
+                            placeholder="••••••••" 
+                            autocomplete="current-password"
+                            required
+                            aria-required="true"
+                            minlength="6">
+                        <!-- Icono para alternar visibilidad de la contraseña -->
+                        <i 
+                            class="fas fa-eye password-toggle" 
+                            id="togglePassword" 
+                            role="button"
+                            tabindex="0"
+                            aria-label="Mostrar contraseña"></i>
+                    </div>
+                    <div class="invalid-feedback">
+                        La contraseña debe tener al menos 6 caracteres.
+                    </div>
+                    <div class="valid-feedback">
+                        ¡Contraseña válida!
+                    </div>
+                </div>
+
+                <!-- Botón para enviar el formulario -->
+                <button type="submit" class="btn btn-primary btn-login w-100">
+                    <i class="fas fa-sign-in-alt me-2"></i>Iniciar Sesión
+                </button>
+            </form>
+        </section>
+
+        <!-- Pie de página con credenciales de demostración -->
+        <footer class="demo-info">
+            <strong>Demo:</strong> usuario@billetera.com / 123456
+        </footer>
+    </main>
+
+    <!-- Script de Bootstrap Bundle (incluye Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Librería jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jQuery UI para efectos -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <!-- Script personalizado para funcionalidad de login -->
+    <script src="assets/js/login.js"></script>
+</body>
+</html>
