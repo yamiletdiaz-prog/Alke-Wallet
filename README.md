@@ -70,19 +70,6 @@ cd alke-wallet
 - Usuario: `usuario@billetera.com`
 - Contrasena: `123456`
 
-## Capturas
-
-Seccion preparada para agregar evidencias visuales del proyecto.
-
-Cuando subas imagenes en `assets/images/`, puedes usar este formato:
-
-```md
-![Login](assets/images/login.png)
-![Menu principal](assets/images/menu.png)
-![Depositos](assets/images/deposit.png)
-![Transacciones](assets/images/transactions.png)
-```
-
 ## Flujo de Navegacion
 
 1. Login.
